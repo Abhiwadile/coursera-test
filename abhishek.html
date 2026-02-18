@@ -1,11 +1,90 @@
-<!doctype  html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-<meta charset="utff-8">
-<title>
-I am Abhi </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>I am Abhi</title>
+  <style>
+    :root {
+      --bg1: #0f172a;
+      --bg2: #1e293b;
+      --text: #f8fafc;
+      --accent: #f472b6;
+      --accent-2: #38bdf8;
+      --card: rgba(15, 23, 42, 0.55);
+      --border: rgba(248, 250, 252, 0.22);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Poppins", "Segoe UI", Roboto, system-ui, -apple-system, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 15% 15%, rgba(56, 189, 248, 0.25), transparent 40%),
+        radial-gradient(circle at 85% 10%, rgba(244, 114, 182, 0.22), transparent 35%),
+        linear-gradient(145deg, var(--bg1), var(--bg2));
+      display: grid;
+      place-items: center;
+      padding: 2rem;
+    }
+
+    .message-card {
+      width: min(720px, 100%);
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 2.25rem;
+      text-align: center;
+      box-shadow: 0 15px 50px rgba(2, 6, 23, 0.45);
+      backdrop-filter: blur(8px);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 3.1rem);
+      letter-spacing: 0.02em;
+      font-weight: 700;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+    }
+
+    p {
+      margin: 1rem 0 0;
+      font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+      line-height: 1.7;
+      color: #e2e8f0;
+    }
+
+    .heart {
+      display: inline-block;
+      margin-left: 0.35rem;
+      color: #fb7185;
+      animation: pulse 1.2s infinite ease-in-out;
+      transform-origin: center;
+    }
+
+    @keyframes pulse {
+      0%,
+      100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+  </style>
 </head>
 <body>
-I love you so much!
+  <main class="message-card">
+    <h1>I am Abhi</h1>
+    <p>
+      I love you so much!
+      <span class="heart" aria-hidden="true">❤</span>
+    </p>
+  </main>
 </body>
 </html>
